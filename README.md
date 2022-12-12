@@ -65,6 +65,8 @@ No modules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_insights_name"></a> [insights\_name](#input\_insights\_name) | n/a | `string` | n/a | yes |
+| <a name="input_location"></a> [location](#input\_location) | n/a | `string` | n/a | yes |
+| <a name="input_rg_name"></a> [rg\_name](#input\_rg\_name) | n/a | `string` | n/a | yes |
 
 ## Outputs
 
@@ -90,15 +92,9 @@ resource "azurerm_role_definition" "terraform_pike" {
 
   permissions {
     actions = [
-    "Microsoft.KeyVault/locations/deletedVaults/read",
-    "Microsoft.KeyVault/vaults/accessPolicies/write",
-    "Microsoft.KeyVault/vaults/delete",
-    "Microsoft.KeyVault/vaults/read",
-    "Microsoft.KeyVault/vaults/write",
-    "Microsoft.ManagedIdentity/userAssignedIdentities/delete",
-    "Microsoft.ManagedIdentity/userAssignedIdentities/read",
-    "Microsoft.ManagedIdentity/userAssignedIdentities/write",
-    "Microsoft.Resources/subscriptions/resourcegroups/read"]
+    "Microsoft.OperationalInsights/workspaces/delete",
+    "Microsoft.OperationalInsights/workspaces/read",
+    "Microsoft.OperationalInsights/workspaces/write"]
     not_actions = []
   }
 

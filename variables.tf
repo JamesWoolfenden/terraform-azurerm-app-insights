@@ -4,9 +4,9 @@ variable "insights_name" {
 
 
 variable "location" {
-  type=string
+  type = string
 }
 
 variable "rg_name" {
-  type=string
+  type = string
 }
